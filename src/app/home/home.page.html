@@ -1,20 +1,14 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<div class="screen-wrapper">
+  <div class="score-wrapper">
+    <h3 class="score">{{totalScore}}</h3>
   </div>
-</ion-content>
+  <div class="buttons-wrapper">
+    <button (click)="addScore(50)">+50</button>
+    <button (click)="addScore(40)">+40</button>
+    <button (click)="addScore(30)">+30</button>
+  </div>
+  <div class="nav-wrapper">
+    <div class="tab-block">Push</div>
+    <div class="tab-block">Stats</div>
+  </div>
+</div>

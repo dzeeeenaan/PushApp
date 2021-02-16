@@ -11,8 +11,8 @@
   margin: 4em;
 }
 .score {
-  font-size: 4em;
-  font-weight: 300;
+  font-size: 5em;
+  font-weight: 400;
 }
 .buttons-wrapper {
   top: 50%;
@@ -43,8 +43,16 @@ button {
 .tab-block {
   text-align: center;
   width: 50%;
-  line-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 50%;
   border-right: 1px solid rgb(102, 6, 25);
+}
+.tab-logo-push {
+  height: 100%;
+}
+.tab-logo {
+  height: 32px;
 }

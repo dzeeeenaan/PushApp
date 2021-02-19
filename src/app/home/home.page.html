@@ -1,17 +1,23 @@
 <div class="screen-wrapper">
-  <div class="score-wrapper">
-    <h3 class="score">{{totalScore}}</h3>
+  <div class="home-component" *ngIf="homeSelected">
+    <h3 class="day">Today</h3>
+    <div class="score-wrapper">
+      <h3 class="score" [ngClass]="{'animate-box': addingScore}">
+        {{totalScore}}
+      </h3>
+    </div>
+    <div class="buttons-wrapper">
+      <button (click)="addScore(50)">+50</button>
+      <button (click)="addScore(40)">+40</button>
+      <button (click)="addScore(30)">+30</button>
+    </div>
   </div>
-  <div class="buttons-wrapper">
-    <button (click)="addScore(50)">+50</button>
-    <button (click)="addScore(40)">+40</button>
-    <button (click)="addScore(30)">+30</button>
-  </div>
+  <app-statistic *ngIf="!homeSelected"></app-statistic>
   <div class="nav-wrapper">
-    <div class="tab-block">
+    <div class="tab-block" (click)="setHome(true)">
       <img class="tab-logo-push" src="/assets/push.png" alt="" />
     </div>
-    <div class="tab-block">
+    <div class="tab-block" (click)="setHome(false)">
       <img class="tab-logo" src="/assets/statistics.png" alt="" />
     </div>
   </div>

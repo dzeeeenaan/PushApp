@@ -15,7 +15,7 @@ export class StatisticComponent implements OnInit {
     if (localStorage.getItem('totalScore') === null) this.totalScore = 0;
     else this.totalScore = parseInt(localStorage.getItem('totalScore'));
     this.getDayRunning();
-    this.averageScore = this.totalScore / this.dayRunning;
+    this.averageScore = Math.round(this.totalScore / this.dayRunning);
   }
 
   getDayRunning() {
